@@ -2,13 +2,13 @@ from pathlib import Path
 import re
 from xml.etree import ElementTree
 
-root=Path(__file__).parent/'dist'
+root=Path(__file__).parent
 refs=set()
-for path in [*root.rglob('*.html'),*root.rglob('*.js')]:
+for path in [*root.glob('*.html'),*(root/'assets').rglob('*.js')]:
  refs.update(re.findall(r'[a-z][a-z-]+\.html',path.read_text(encoding='utf-8')))
 missing=[name for name in refs if not (root/name).exists()]
 assert not missing,missing
-for path in root.rglob('*.svg'):
+for path in (root/'assets').rglob('*.svg'):
  ElementTree.parse(path)
 for path in root.glob('*.html'):
  text=path.read_text(encoding='utf-8')

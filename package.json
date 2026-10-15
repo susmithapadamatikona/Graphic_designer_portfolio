@@ -1,1 +1,1 @@
-{"name":"studio-pixel","private":true,"type":"module","scripts":{"start":"python -m http.server 8080 --directory dist","check":"node --check dist/assets/js/main.js && node --check dist/assets/js/storage.js && node --check dist/assets/js/project-data.js"}}
+{"name":"graphic-designer-portfolio","private":true,"type":"module","scripts":{"start":"python -m http.server 8080","check":"node --check assets/js/main.js && node --check assets/js/storage.js && node --check assets/js/project-data.js && node --check assets/js/page-sections.js"}}

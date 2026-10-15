@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 
-root=Path(__file__).parent/'dist'
+root=Path(__file__).parent
 def write(p,s):
  p=root/p;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(s,encoding='utf-8')
 
@@ -37,6 +37,6 @@ write(Path('assets/css/responsive.css'),'''
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 ''')
 for path in root.glob('*.html'):
- text=path.read_text(encoding='utf-8').replace('<script type="module"','<link rel="stylesheet" href="assets/css/responsive.css"><script type="module"')
+ text=path.read_text(encoding='utf-8').replace('<script type="module"','<link rel="stylesheet" href="assets/css/responsive.css"><link rel="stylesheet" href="assets/css/page-sections.css"><script type="module"')
  path.write_text(text,encoding='utf-8')
 print('Generated pages, styles and local artwork.')
