@@ -2,7 +2,7 @@
 
 Buildless, multipage HTML/CSS/vanilla JavaScript portfolio. Start with `npm start` and open `http://localhost:8080`. All HTML pages and the assets folder are directly in the project root. No framework, backend or runtime dependency is required.
 
-The written brief was provided without its reference screenshot. This implementation follows the specified palette, typography, content and section sequence; an exact screenshot match has not been verified. All six branding compositions are original, locally bundled SVG artwork. Brands, sample experience and testimonials are fictional and identified in the interface.
+The written brief was provided without its reference screenshot. This implementation follows the specified palette, typography, content and section sequence; an exact screenshot match has not been verified. All six branding compositions are original, locally bundled AI-generated mockups and vector artwork. Brands, sample experience and testimonials are fictional and identified in the interface.
 
 ## Demo behavior
 

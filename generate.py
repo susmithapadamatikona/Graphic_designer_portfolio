@@ -11,7 +11,8 @@ def write(p,s):
 
 projects=[dict(id=i+1,title=t,category=c,year=2026 if i<4 else 2025,status='Published',description=d,image=f'assets/images/{t.lower()}.svg') for i,(t,c,d) in enumerate([
 ('MONO','Branding','A bold new perspective for a modern architecture studio.'),('ORBIT','Logo Design','An identity built for a more connected tomorrow.'),('BLOOM','Packaging','Thoughtful skincare. Naturally distinctive.'),('OFFSCRIPT','Print & Editorial','An independent voice, unapologetically expressed.'),('NOIR','Advertising','A quiet statement in the world of luxury fragrance.'),('FIELDWORK','UI/UX','A digital home for people who think outside.')])]
-write(Path('assets/js/project-data.js'),'export const seedProjects = '+json.dumps(projects)+';\nexport const services = '+json.dumps(['Brand Identity Design','Logo Design','Packaging Design','Print & Editorial Design','Social Media Creatives','UI/UX & Digital Design'])+';')
+display_projects=[{**p,'image':p['image'].replace('.svg','-photo.webp')} for p in projects]
+write(Path('assets/js/project-data.js'),'export const seedProjects = '+json.dumps(display_projects)+';\nexport const services = '+json.dumps(['Brand Identity Design','Logo Design','Packaging Design','Print & Editorial Design','Social Media Creatives','UI/UX & Digital Design'])+';')
 
 # Original, locally bundled vector branding compositions: no remote image dependencies.
 for p in projects:
