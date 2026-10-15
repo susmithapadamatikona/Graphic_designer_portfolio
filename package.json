@@ -1,0 +1,1 @@
+{"name":"studio-pixel","private":true,"type":"module","scripts":{"start":"python -m http.server 8080 --directory dist","check":"node --check dist/assets/js/main.js && node --check dist/assets/js/storage.js && node --check dist/assets/js/project-data.js"}}
