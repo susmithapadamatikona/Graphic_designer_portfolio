@@ -17,4 +17,6 @@ The written brief was provided without its reference screenshot. This implementa
 
 Local storage is isolated to each browser and origin. Clearing site data resets the demo. Do not enter sensitive information. Configure actual contact information in Profile and social handles in Settings. Google Fonts is the only remote design dependency; system fallbacks are provided.
 
-`generate.py` regenerates HTML, CSS, artwork and seed data. JavaScript application files are maintained separately. Run `npm run check` for JavaScript syntax validation.
+Every HTML file contains its complete, formatted page markup, including navigation, content sections and footer (or the workspace layout for admin pages). Edit these files directly in VS Code. Public pages use this HTML immediately; JavaScript adds interactions and renders browser-local records where needed. Account checks and admin CRUD remain frontend demonstrations.
+
+`generate.py` regenerates CSS, artwork and seed data and preserves existing HTML files. JavaScript application files are maintained separately. Run `npm run check` for JavaScript syntax validation. `build-static.mjs` prepares temporary publication assets; the editable HTML and assets remain in the project root.

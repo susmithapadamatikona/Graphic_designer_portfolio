@@ -1,1 +1,242 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Studio Pixel — distinctive visual identities, thoughtful packaging and digital experiences."><title>Project Management — Studio Pixel</title><link rel="icon" href="assets/images/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/responsive.css"><link rel="stylesheet" href="assets/css/page-sections.css"><script type="module" src="assets/js/main.js"></script></head><body data-page="project-management"><a class="skip" href="#main">Skip to content</a><div id="app"></div><div id="toast" role="status" aria-live="polite"></div><dialog id="modal"></dialog><button class="back-top" aria-label="Back to top">↑</button></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Studio Pixel — distinctive visual identities, thoughtful packaging and digital experiences."
+    />
+    <title>Project Management — Studio Pixel</title>
+    <link rel="icon" href="assets/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/page-sections.css" />
+    <script type="module" src="assets/js/main.js"></script>
+  </head>
+  <body data-page="project-management">
+    <a class="skip" href="#main">Skip to content</a>
+    <div id="app" data-static-page="true">
+      <div class="admin-layout">
+        <aside class="admin-sidebar">
+          <a class="logo" href="index.html"><b>✳</b> STUDIO PIXEL.</a
+          ><small>WORKSPACE / DEMO</small>
+          <nav aria-label="Dashboard">
+            <a href="admin-dashboard.html" class="">Dashboard</a
+            ><a href="project-management.html" class="active">Projects</a
+            ><a href="category-management.html" class="">Categories</a
+            ><a href="inquiry-management.html" class="">Inquiries</a
+            ><a href="testimonial-management.html" class="">Testimonials</a
+            ><a href="blog-management.html" class="">Blog</a
+            ><a href="inquiry-management.html?view=messages" class="">Messages</a
+            ><a href="profile-settings.html" class="">Profile</a
+            ><a href="website-settings.html" class="">Settings</a>
+          </nav>
+          <small>Local browser data only.</small><a href="index.html">↗ View Website</a
+          ><a href="#" id="logout">Log out</a>
+        </aside>
+        <main class="admin-main" id="main">
+          <div class="admin-header">
+            <div>
+              <p style="font-size: 10px">STUDIO PIXEL / WORKSPACE</p>
+              <h1>Project Management</h1>
+            </div>
+            <a class="button" href="add-project.html"
+              >+ Add Project <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <span class="badge">Frontend demonstration · not secure authorization</span>
+          <div id="admin-content">
+            <div class="toolbar">
+              <input
+                id="admin-search"
+                type="search"
+                placeholder="Search project table"
+                aria-label="Search project table"
+              />
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>PROJECT</th>
+                    <th>CATEGORY</th>
+                    <th>YEAR</th>
+                    <th>STATUS</th>
+                    <th>ACTIONS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-row="">
+                    <td>MONO</td>
+                    <td>Branding</td>
+                    <td>2026</td>
+                    <td><span class="badge">Published</span></td>
+                    <td>
+                      <a href="edit-project.html?id=1">Edit ↗</a>
+                      <button data-toggle-project="1">Unpublish</button
+                      ><button data-delete="projects:1">Delete</button>
+                    </td>
+                  </tr>
+                  <tr data-row="">
+                    <td>ORBIT</td>
+                    <td>Logo Design</td>
+                    <td>2026</td>
+                    <td><span class="badge">Published</span></td>
+                    <td>
+                      <a href="edit-project.html?id=2">Edit ↗</a>
+                      <button data-toggle-project="2">Unpublish</button
+                      ><button data-delete="projects:2">Delete</button>
+                    </td>
+                  </tr>
+                  <tr data-row="">
+                    <td>BLOOM</td>
+                    <td>Packaging</td>
+                    <td>2026</td>
+                    <td><span class="badge">Published</span></td>
+                    <td>
+                      <a href="edit-project.html?id=3">Edit ↗</a>
+                      <button data-toggle-project="3">Unpublish</button
+                      ><button data-delete="projects:3">Delete</button>
+                    </td>
+                  </tr>
+                  <tr data-row="">
+                    <td>OFFSCRIPT</td>
+                    <td>Print &amp; Editorial</td>
+                    <td>2026</td>
+                    <td><span class="badge">Published</span></td>
+                    <td>
+                      <a href="edit-project.html?id=4">Edit ↗</a>
+                      <button data-toggle-project="4">Unpublish</button
+                      ><button data-delete="projects:4">Delete</button>
+                    </td>
+                  </tr>
+                  <tr data-row="">
+                    <td>NOIR</td>
+                    <td>Advertising</td>
+                    <td>2025</td>
+                    <td><span class="badge">Published</span></td>
+                    <td>
+                      <a href="edit-project.html?id=5">Edit ↗</a>
+                      <button data-toggle-project="5">Unpublish</button
+                      ><button data-delete="projects:5">Delete</button>
+                    </td>
+                  </tr>
+                  <tr data-row="">
+                    <td>FIELDWORK</td>
+                    <td>UI/UX</td>
+                    <td>2025</td>
+                    <td><span class="badge">Published</span></td>
+                    <td>
+                      <a href="edit-project.html?id=6">Edit ↗</a>
+                      <button data-toggle-project="6">Unpublish</button
+                      ><button data-delete="projects:6">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="page-additions workspace-additions">
+            <section class="added-section" aria-labelledby="added-heading-1">
+              <div class="">
+                <div class="added-intro">
+                  <div>
+                    <div class="eyebrow">EDITORIAL REVIEW</div>
+                    <h2 id="added-heading-1">Keep the project list purposeful.</h2>
+                  </div>
+                  <p>A small, clear collection is easier to explore.</p>
+                </div>
+                <div class="added-items">
+                  <div class="added-item">
+                    <span class="added-number">01</span>
+                    <h3>Title</h3>
+                    <p>Use a concise project name with consistent capitalization.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">02</span>
+                    <h3>Category</h3>
+                    <p>Choose the discipline that best describes the work.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">03</span>
+                    <h3>Year</h3>
+                    <p>Use the actual project year rather than the date of the latest edit.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="added-section" aria-labelledby="added-heading-2">
+              <div class="">
+                <div class="added-intro">
+                  <div>
+                    <div class="eyebrow">PUBLICATION STATES</div>
+                    <h2 id="added-heading-2">Draft first. Publish when ready.</h2>
+                  </div>
+                  <p>The portfolio only shows records marked Published.</p>
+                </div>
+                <div class="added-items">
+                  <div class="added-item">
+                    <span class="added-number">01</span>
+                    <h3>Draft</h3>
+                    <p>Use draft status while refining the description and metadata.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">02</span>
+                    <h3>Published</h3>
+                    <p>Make the record available in portfolio listings and detail pages.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">03</span>
+                    <h3>Unpublished</h3>
+                    <p>Return a project to draft without deleting its record.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="added-section" aria-labelledby="added-heading-3">
+              <div class="">
+                <div class="added-intro">
+                  <div>
+                    <div class="eyebrow">BEFORE DELETING</div>
+                    <h2 id="added-heading-3">Consider the project’s place in the collection.</h2>
+                  </div>
+                  <p>Deletion removes a record from this browser’s portfolio data.</p>
+                </div>
+                <div class="added-items">
+                  <div class="added-item">
+                    <span class="added-number">01</span>
+                    <h3>Review the entry</h3>
+                    <p>Check that you have selected the intended project.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">02</span>
+                    <h3>Consider a draft</h3>
+                    <p>Unpublish the project if you want to retain it for later.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">03</span>
+                    <h3>Check the listing</h3>
+                    <p>After saving, preview the portfolio and its filters.</p>
+                  </div>
+                </div>
+                <a class="text-link added-link" href="portfolio.html"
+                  >Preview portfolio <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="modal"></dialog>
+    <button class="back-top" aria-label="Back to top">↑</button>
+  </body>
+</html>

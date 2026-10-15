@@ -52,7 +52,18 @@ return `<form class="panel form-grid" id="settings-form"><label class="field ful
 function inquiryTable(items){return table(['NAME','SERVICE','STATUS','ACTION'],items.map(i=>`<tr><td>${esc(i.name)}<br><small>${esc(i.email)}</small></td><td>${esc(i.service)}</td><td>${esc(i.status||'New')}</td><td><button data-inquiry-view="${i.id}">View</button><button data-inquiry-status="${i.id}">Mark ${i.status==='Reviewed'?'New':'Reviewed'}</button><button data-delete="inquiries:${i.id}">Delete</button></td></tr>`))}
 
 function render(){document.body.classList.toggle('high-contrast',read('contrast')==='high');if(adminPages.includes(page)){app.innerHTML=admin();return}let content=page==='index'?home():page==='portfolio'?portfolio():page==='project-details'?projectDetails():page==='about'?about():page==='services'?servicesPage():page==='service-details'?serviceDetails():page==='blog'?blog():page==='blog-details'?article():['contact','start-project'].includes(page)?inquiry():['login','register','forgot-password'].includes(page)?auth():page==='404'?notFound():simple();app.innerHTML=header()+`<main id="main">${content}</main>`+footer();if(read('social','')){const social=document.querySelector('#social+p');if(social)social.textContent=read('social','')}}
-render();addPageSections(page);save('views',read('views',0)+1);
+// Use the readable HTML in each page as the initial document. Only rebuild
+// records that depend on a query parameter or this browser's demo data.
+const recordPages=['project-details','service-details','blog-details'];
+const localContentPages=['index','about','contact','start-project','case-studies','testimonials'];
+const hasLocalContent=['projects','profile','social','testimonials'].some(key=>read(key,null)!==null);
+const needsDynamicContent=adminPages.includes(page)
+ || (recordPages.includes(page)&&location.search)
+ || (localContentPages.includes(page)&&hasLocalContent);
+document.body.classList.toggle('high-contrast',read('contrast')==='high');
+if(!app.querySelector('#main')||needsDynamicContent)render();
+if(!app.querySelector('.page-additions'))addPageSections(page);
+save('views',read('views',0)+1);
 document.addEventListener('storage-error',()=>toast('Storage is unavailable or full. Your changes were not saved.'));
 function activity(message){save('activity',[...read('activity'),new Date().toLocaleString()+': '+message].slice(-50))}
 function modal(html){const d=document.querySelector('#modal');d.innerHTML=`<button class="close" aria-label="Close dialog">×</button>${html}`;d.showModal();return d}

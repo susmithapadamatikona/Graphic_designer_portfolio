@@ -3,7 +3,11 @@ import json
 
 root=Path(__file__).parent
 def write(p,s):
- p=root/p;p.parent.mkdir(parents=True,exist_ok=True);p.write_text(s,encoding='utf-8')
+ p=root/p
+ # Full page markup is maintained in the HTML files. Do not replace it with a shell.
+ if p.suffix=='.html' and p.exists():
+  return
+ p.parent.mkdir(parents=True,exist_ok=True);p.write_text(s,encoding='utf-8')
 
 projects=[dict(id=i+1,title=t,category=c,year=2026 if i<4 else 2025,status='Published',description=d,image=f'assets/images/{t.lower()}.svg') for i,(t,c,d) in enumerate([
 ('MONO','Branding','A bold new perspective for a modern architecture studio.'),('ORBIT','Logo Design','An identity built for a more connected tomorrow.'),('BLOOM','Packaging','Thoughtful skincare. Naturally distinctive.'),('OFFSCRIPT','Print & Editorial','An independent voice, unapologetically expressed.'),('NOIR','Advertising','A quiet statement in the world of luxury fragrance.'),('FIELDWORK','UI/UX','A digital home for people who think outside.')])]
@@ -37,6 +41,8 @@ write(Path('assets/css/responsive.css'),'''
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
 ''')
 for path in root.glob('*.html'):
- text=path.read_text(encoding='utf-8').replace('<script type="module"','<link rel="stylesheet" href="assets/css/responsive.css"><link rel="stylesheet" href="assets/css/page-sections.css"><script type="module"')
- path.write_text(text,encoding='utf-8')
+ text=path.read_text(encoding='utf-8')
+ if 'assets/css/page-sections.css' not in text:
+  text=text.replace('<script type="module"','<link rel="stylesheet" href="assets/css/responsive.css"><link rel="stylesheet" href="assets/css/page-sections.css"><script type="module"')
+  path.write_text(text,encoding='utf-8')
 print('Generated pages, styles and local artwork.')

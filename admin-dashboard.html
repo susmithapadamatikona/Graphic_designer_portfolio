@@ -1,1 +1,290 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Studio Pixel — distinctive visual identities, thoughtful packaging and digital experiences."><title>Admin Dashboard — Studio Pixel</title><link rel="icon" href="assets/images/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/responsive.css"><link rel="stylesheet" href="assets/css/page-sections.css"><script type="module" src="assets/js/main.js"></script></head><body data-page="admin-dashboard"><a class="skip" href="#main">Skip to content</a><div id="app"></div><div id="toast" role="status" aria-live="polite"></div><dialog id="modal"></dialog><button class="back-top" aria-label="Back to top">↑</button></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Studio Pixel — distinctive visual identities, thoughtful packaging and digital experiences."
+    />
+    <title>Admin Dashboard — Studio Pixel</title>
+    <link rel="icon" href="assets/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/page-sections.css" />
+    <script type="module" src="assets/js/main.js"></script>
+  </head>
+  <body data-page="admin-dashboard">
+    <a class="skip" href="#main">Skip to content</a>
+    <div id="app" data-static-page="true">
+      <div class="admin-layout">
+        <aside class="admin-sidebar">
+          <a class="logo" href="index.html"><b>✳</b> STUDIO PIXEL.</a
+          ><small>WORKSPACE / DEMO</small>
+          <nav aria-label="Dashboard">
+            <a href="admin-dashboard.html" class="active">Dashboard</a
+            ><a href="project-management.html" class="">Projects</a
+            ><a href="category-management.html" class="">Categories</a
+            ><a href="inquiry-management.html" class="">Inquiries</a
+            ><a href="testimonial-management.html" class="">Testimonials</a
+            ><a href="blog-management.html" class="">Blog</a
+            ><a href="inquiry-management.html?view=messages" class="">Messages</a
+            ><a href="profile-settings.html" class="">Profile</a
+            ><a href="website-settings.html" class="">Settings</a>
+          </nav>
+          <small>Local browser data only.</small><a href="index.html">↗ View Website</a
+          ><a href="#" id="logout">Log out</a>
+        </aside>
+        <main class="admin-main" id="main">
+          <div class="admin-header">
+            <div>
+              <p style="font-size: 10px">STUDIO PIXEL / WORKSPACE</p>
+              <h1>Admin Dashboard</h1>
+            </div>
+            <a class="button" href="add-project.html"
+              >+ Add Project <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <span class="badge">Frontend demonstration · not secure authorization</span>
+          <div id="admin-content">
+            <div class="admin-stats">
+              <div class="admin-stat">
+                <p>Total Projects</p>
+                <strong>6</strong><small class="accent">Browser demo data</small>
+              </div>
+              <div class="admin-stat">
+                <p>Published Projects</p>
+                <strong>6</strong><small class="accent">Browser demo data</small>
+              </div>
+              <div class="admin-stat">
+                <p>Draft Projects</p>
+                <strong>0</strong><small class="accent">Browser demo data</small>
+              </div>
+              <div class="admin-stat">
+                <p>Total Inquiries</p>
+                <strong>0</strong><small class="accent">Browser demo data</small>
+              </div>
+            </div>
+            <div class="panels">
+              <section class="panel">
+                <h3>Portfolio Views</h3>
+                <p style="font-size: 11px; margin-bottom: 15px">
+                  Illustrative chart · local page views: 3
+                </p>
+                <div class="chart">
+                  <div style="height: 32px"><span>Mon</span></div>
+                  <div style="height: 55px"><span>Tue</span></div>
+                  <div style="height: 42px"><span>Wed</span></div>
+                  <div style="height: 70px"><span>Thu</span></div>
+                  <div style="height: 62px"><span>Fri</span></div>
+                  <div style="height: 88px"><span>Sat</span></div>
+                  <div style="height: 105px"><span>Sun</span></div>
+                </div>
+              </section>
+              <section class="panel">
+                <h3>Project Categories</h3>
+                <p
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    margin: 9px 0;
+                  "
+                >
+                  <span>Branding</span><b>1</b>
+                </p>
+                <p
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    margin: 9px 0;
+                  "
+                >
+                  <span>Logo Design</span><b>1</b>
+                </p>
+                <p
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    margin: 9px 0;
+                  "
+                >
+                  <span>Packaging</span><b>1</b>
+                </p>
+                <p
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    margin: 9px 0;
+                  "
+                >
+                  <span>Print &amp; Editorial</span><b>1</b>
+                </p>
+                <p
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    margin: 9px 0;
+                  "
+                >
+                  <span>Social Media</span><b>0</b>
+                </p>
+                <p
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    margin: 9px 0;
+                  "
+                >
+                  <span>UI/UX</span><b>1</b>
+                </p>
+                <p
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 12px;
+                    margin: 9px 0;
+                  "
+                >
+                  <span>Advertising</span><b>1</b>
+                </p>
+              </section>
+            </div>
+            <section class="panel">
+              <h3>Recent Inquiries</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>NAME</th>
+                      <th>SERVICE</th>
+                      <th>STATUS</th>
+                      <th>ACTION</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td colspan="4">Nothing here yet.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+            <section class="panel" style="margin-top: 25px">
+              <h3>Recent Activities</h3>
+              <p style="font-size: 12px; padding: 8px 0; border-bottom: 1px solid var(--line)">
+                Workspace ready. Add a project or submit a demo inquiry to get started.
+              </p>
+            </section>
+          </div>
+          <div class="page-additions workspace-additions">
+            <section class="added-section" aria-labelledby="added-heading-1">
+              <div class="">
+                <div class="added-intro">
+                  <div>
+                    <div class="eyebrow">WORKSPACE REVIEW</div>
+                    <h2 id="added-heading-1">A useful daily overview.</h2>
+                  </div>
+                  <p>Use the dashboard to decide what needs attention.</p>
+                </div>
+                <div class="added-items">
+                  <div class="added-item">
+                    <span class="added-number">01</span>
+                    <h3>Publication</h3>
+                    <p>Check which projects are ready for the public portfolio.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">02</span>
+                    <h3>Inquiries</h3>
+                    <p>Review new briefs and update their status.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">03</span>
+                    <h3>Content</h3>
+                    <p>Keep project information and journal entries consistent.</p>
+                  </div>
+                </div>
+                <a class="text-link added-link" href="project-management.html"
+                  >Review projects <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </section>
+            <section class="added-section" aria-labelledby="added-heading-2">
+              <div class="">
+                <div class="added-intro">
+                  <div>
+                    <div class="eyebrow">UNDERSTANDING THE NUMBERS</div>
+                    <h2 id="added-heading-2">Demo metrics with clear boundaries.</h2>
+                  </div>
+                  <p>The cards reflect local records; the chart is illustrative.</p>
+                </div>
+                <div class="added-items">
+                  <div class="added-item">
+                    <span class="added-number">01</span>
+                    <h3>Project totals</h3>
+                    <p>Counts are calculated from records in this browser.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">02</span>
+                    <h3>Page views</h3>
+                    <p>The local view count increments on page loads on this origin.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">03</span>
+                    <h3>Chart bars</h3>
+                    <p>The weekly chart is sample presentation data, not live analytics.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="added-section" aria-labelledby="added-heading-3">
+              <div class="">
+                <div class="added-intro">
+                  <div>
+                    <div class="eyebrow">WORKSPACE ROUTINE</div>
+                    <h2 id="added-heading-3">Check, update and preview.</h2>
+                  </div>
+                  <p>A short review helps the portfolio stay coherent.</p>
+                </div>
+                <div class="added-items">
+                  <div class="added-item">
+                    <span class="added-number">01</span>
+                    <h3>Check the details</h3>
+                    <p>Review titles, categories, dates and publication states.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">02</span>
+                    <h3>Make a focused update</h3>
+                    <p>Change one record and save it.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">03</span>
+                    <h3>Preview the result</h3>
+                    <p>Open the related public page to confirm the change.</p>
+                  </div>
+                </div>
+                <a class="text-link added-link" href="index.html"
+                  >Preview website <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="modal"></dialog>
+    <button class="back-top" aria-label="Back to top">↑</button>
+  </body>
+</html>

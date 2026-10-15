@@ -1,1 +1,236 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Studio Pixel — distinctive visual identities, thoughtful packaging and digital experiences."><title>Category Management — Studio Pixel</title><link rel="icon" href="assets/images/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="assets/css/style.css"><link rel="stylesheet" href="assets/css/responsive.css"><link rel="stylesheet" href="assets/css/page-sections.css"><script type="module" src="assets/js/main.js"></script></head><body data-page="category-management"><a class="skip" href="#main">Skip to content</a><div id="app"></div><div id="toast" role="status" aria-live="polite"></div><dialog id="modal"></dialog><button class="back-top" aria-label="Back to top">↑</button></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Studio Pixel — distinctive visual identities, thoughtful packaging and digital experiences."
+    />
+    <title>Category Management — Studio Pixel</title>
+    <link rel="icon" href="assets/images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/page-sections.css" />
+    <script type="module" src="assets/js/main.js"></script>
+  </head>
+  <body data-page="category-management">
+    <a class="skip" href="#main">Skip to content</a>
+    <div id="app" data-static-page="true">
+      <div class="admin-layout">
+        <aside class="admin-sidebar">
+          <a class="logo" href="index.html"><b>✳</b> STUDIO PIXEL.</a
+          ><small>WORKSPACE / DEMO</small>
+          <nav aria-label="Dashboard">
+            <a href="admin-dashboard.html" class="">Dashboard</a
+            ><a href="project-management.html" class="">Projects</a
+            ><a href="category-management.html" class="active">Categories</a
+            ><a href="inquiry-management.html" class="">Inquiries</a
+            ><a href="testimonial-management.html" class="">Testimonials</a
+            ><a href="blog-management.html" class="">Blog</a
+            ><a href="inquiry-management.html?view=messages" class="">Messages</a
+            ><a href="profile-settings.html" class="">Profile</a
+            ><a href="website-settings.html" class="">Settings</a>
+          </nav>
+          <small>Local browser data only.</small><a href="index.html">↗ View Website</a
+          ><a href="#" id="logout">Log out</a>
+        </aside>
+        <main class="admin-main" id="main">
+          <div class="admin-header">
+            <div>
+              <p style="font-size: 10px">STUDIO PIXEL / WORKSPACE</p>
+              <h1>Category Management</h1>
+            </div>
+            <a class="button" href="add-project.html"
+              >+ Add Project <span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <span class="badge">Frontend demonstration · not secure authorization</span>
+          <div id="admin-content">
+            <form id="category-form" class="toolbar">
+              <input
+                name="name"
+                required=""
+                maxlength="50"
+                placeholder="New category name"
+                aria-label="Category name"
+              /><button class="button">Add Category</button>
+            </form>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>CATEGORY</th>
+                    <th>PROJECTS</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Branding</td>
+                    <td>1</td>
+                    <td>
+                      <button data-category-edit="0">Rename</button
+                      ><button data-category-delete="0">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Logo Design</td>
+                    <td>1</td>
+                    <td>
+                      <button data-category-edit="1">Rename</button
+                      ><button data-category-delete="1">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Packaging</td>
+                    <td>1</td>
+                    <td>
+                      <button data-category-edit="2">Rename</button
+                      ><button data-category-delete="2">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Print &amp; Editorial</td>
+                    <td>1</td>
+                    <td>
+                      <button data-category-edit="3">Rename</button
+                      ><button data-category-delete="3">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Social Media</td>
+                    <td>0</td>
+                    <td>
+                      <button data-category-edit="4">Rename</button
+                      ><button data-category-delete="4">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>UI/UX</td>
+                    <td>1</td>
+                    <td>
+                      <button data-category-edit="5">Rename</button
+                      ><button data-category-delete="5">Delete</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Advertising</td>
+                    <td>1</td>
+                    <td>
+                      <button data-category-edit="6">Rename</button
+                      ><button data-category-delete="6">Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="page-additions workspace-additions">
+            <section class="added-section" aria-labelledby="added-heading-1">
+              <div class="">
+                <div class="added-intro">
+                  <div>
+                    <div class="eyebrow">A CLEAR TAXONOMY</div>
+                    <h2 id="added-heading-1">Group work by useful distinctions.</h2>
+                  </div>
+                  <p>Categories should help visitors find a relevant discipline.</p>
+                </div>
+                <div class="added-items">
+                  <div class="added-item">
+                    <span class="added-number">01</span>
+                    <h3>Be specific</h3>
+                    <p>Choose recognizable service names rather than internal labels.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">02</span>
+                    <h3>Avoid duplicates</h3>
+                    <p>
+                      Keep singular, plural and differently cased names from splitting the same
+                      group.
+                    </p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">03</span>
+                    <h3>Stay concise</h3>
+                    <p>Short labels work better in filter controls.</p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="added-section" aria-labelledby="added-heading-2">
+              <div class="">
+                <div class="added-intro">
+                  <div>
+                    <div class="eyebrow">CHANGING A CATEGORY</div>
+                    <h2 id="added-heading-2">Keep assigned work connected.</h2>
+                  </div>
+                  <p>Renaming a category also updates the projects using that name.</p>
+                </div>
+                <div class="added-items">
+                  <div class="added-item">
+                    <span class="added-number">01</span>
+                    <h3>Review assignments</h3>
+                    <p>Check how many projects use the category before changing it.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">02</span>
+                    <h3>Rename carefully</h3>
+                    <p>Use the Rename action to preserve the association.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">03</span>
+                    <h3>Reassign before deletion</h3>
+                    <p>
+                      A category with assigned projects must be emptied before it can be deleted.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="added-section" aria-labelledby="added-heading-3">
+              <div class="">
+                <div class="added-intro">
+                  <div>
+                    <div class="eyebrow">CHECK THE FILTERS</div>
+                    <h2 id="added-heading-3">Review the visitor’s point of view.</h2>
+                  </div>
+                  <p>Category edits should make the portfolio easier to explore.</p>
+                </div>
+                <div class="added-items">
+                  <div class="added-item">
+                    <span class="added-number">01</span>
+                    <h3>Filter labels</h3>
+                    <p>Check spelling and consistency in the portfolio controls.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">02</span>
+                    <h3>Results</h3>
+                    <p>Make sure each category returns the intended projects.</p>
+                  </div>
+                  <div class="added-item">
+                    <span class="added-number">03</span>
+                    <h3>Coverage</h3>
+                    <p>Use All to review the collection without a category constraint.</p>
+                  </div>
+                </div>
+                <a class="text-link added-link" href="portfolio.html"
+                  >Test portfolio filters <span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="modal"></dialog>
+    <button class="back-top" aria-label="Back to top">↑</button>
+  </body>
+</html>
