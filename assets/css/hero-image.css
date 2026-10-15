@@ -1,0 +1,54 @@
+/* Homepage photography: keep the left-hand headline separate and readable. */
+.hero-visual {
+  width: 100%;
+  height: 480px;
+  margin: 0;
+  position: relative;
+  background: #e6e3dd;
+}
+
+.hero-visual .hero-photo {
+  position: static;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: none;
+}
+
+.hero-visual .seal {
+  top: -18px;
+  right: -14px;
+  z-index: 1;
+}
+
+.hero-visual .hero-caption {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  padding: 12px 16px;
+  color: var(--ink);
+  background: var(--bg);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1100px) {
+  .hero-visual { height: 430px; }
+}
+
+@media (max-width: 800px) {
+  .hero-visual { height: auto; aspect-ratio: 1.2; margin-top: 24px; }
+  .hero-visual .seal { right: 10px; }
+}
+
+@media (max-width: 600px) {
+  .hero-visual { aspect-ratio: 1; }
+  .hero-visual .seal { top: -12px; right: 8px; }
+  .hero-visual .hero-caption { left: 10px; right: 10px; bottom: 10px; font-size: 8px; padding: 10px; }
+}
