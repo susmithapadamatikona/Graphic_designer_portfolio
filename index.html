@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/page-sections.css" />
     <link rel="stylesheet" href="assets/css/hero-image.css" />
+    <link rel="stylesheet" href="assets/css/selected-work.css" />
     <script type="module" src="assets/js/main.js"></script>
   </head>
   <body data-page="index">
@@ -97,7 +98,7 @@
             ><strong>COMMON GROUND</strong>
           </div>
         </section>
-        <section class="section wrap">
+        <section class="section wrap selected-work" id="selected-work" aria-label="Selected work">
           <div class="section-heading">
             <div>
               <div class="eyebrow">A SELECTION OF RECENT PROJECTS</div>
@@ -107,13 +108,14 @@
               Different challenges. One considered approach. A little strategy, a lot of character.
             </p>
           </div>
-          <div class="filters" id="home-filters">
-            <button class="chip active" data-home-filter="All">All</button
-            ><button class="chip" data-home-filter="Branding">Branding</button
-            ><button class="chip" data-home-filter="Packaging">Packaging</button
-            ><button class="chip" data-home-filter="Print &amp; Editorial">
-              Print &amp; Editorial</button
-            ><button class="chip" data-home-filter="UI/UX">UI/UX</button>
+          <div class="filters" id="home-filters" role="group" aria-label="Filter selected projects">
+            <button class="chip active" data-home-filter="All" aria-pressed="true">All</button>
+            <button class="chip" data-home-filter="Branding" aria-pressed="false">Branding</button>
+            <button class="chip" data-home-filter="Logo Design" aria-pressed="false">Logo Design</button>
+            <button class="chip" data-home-filter="Packaging" aria-pressed="false">Packaging</button>
+            <button class="chip" data-home-filter="Print &amp; Editorial" aria-pressed="false">Print &amp; Editorial</button>
+            <button class="chip" data-home-filter="Advertising" aria-pressed="false">Advertising</button>
+            <button class="chip" data-home-filter="UI/UX" aria-pressed="false">UI/UX</button>
           </div>
           <div class="project-grid" id="home-projects">
             <article class="project-card">
@@ -261,7 +263,8 @@
               >
             </article>
           </div>
-          <div class="center">
+          <div class="work-footer">
+            <p>Explore the ideas behind every project.</p>
             <a class="text-link" href="portfolio.html"
               >View All Projects <span aria-hidden="true">↗</span></a
             >
