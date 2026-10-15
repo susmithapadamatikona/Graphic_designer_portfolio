@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/page-sections.css" />
     <link rel="stylesheet" href="assets/css/hero-image.css" />
     <link rel="stylesheet" href="assets/css/selected-work.css" />
+    <link rel="stylesheet" href="assets/css/studio-preview.css" />
     <script type="module" src="assets/js/main.js"></script>
   </head>
   <body data-page="index">
@@ -273,32 +274,28 @@
         <div class="marquee">
           IDEAS MADE VISIBLE <span>✳</span> BRANDS MADE MEMORABLE <span>✳</span> DESIGN WITH PURPOSE
         </div>
-        <section class="section wrap split">
-          <div class="about-art">
+        <section class="section wrap studio-preview" id="studio-preview" aria-labelledby="studio-preview-title">
+          <figure class="studio-image-card">
             <img
-              src="assets/images/offscript-photo.webp"
-              alt="An editorial design concept from the studio"
+              src="assets/images/studio-workspace.webp"
+              alt="A sunlit designer workspace with a logo sketchbook, charcoal and coral paper swatches, pencils and design books"
+              width="1402"
+              height="1122"
+              loading="lazy"
+              decoding="async"
             />
-            <div class="about-tag">A curious mind.<br />A considered approach. ↗</div>
-          </div>
-          <div>
+            <figcaption>A curious mind. A considered approach.</figcaption>
+          </figure>
+          <div class="studio-copy">
             <div class="eyebrow">THE MIND BEHIND THE PIXELS</div>
-            <h2>Curiosity is my<br /><span class="accent">creative process.</span></h2>
-            <p>
-              I’m the independent designer behind Studio Pixel. I turn questions into ideas, and
-              ideas into distinctive visual identities.
-            </p>
-            <p>
-              My approach brings strategic thinking and a hands-on love of craft together. Because
-              the best design doesn’t just look good. It means something.
-            </p>
-            <a class="text-link" href="about.html"
-              >A Little More About Me <span aria-hidden="true">↗</span></a
-            >
-            <div class="stats">
-              <div><strong>06</strong><small>Concept projects</small></div>
-              <div><strong>06</strong><small>Creative disciplines</small></div>
-              <div><strong>01</strong><small>Independent perspective</small></div>
+            <h2 id="studio-preview-title">Curiosity is my <span class="accent">creative process.</span></h2>
+            <p>I’m the independent designer behind Studio Pixel. I turn questions into ideas, and ideas into distinctive visual identities.</p>
+            <p>My approach brings strategic thinking and a hands-on love of craft together. Because the best design doesn’t just look good. It means something.</p>
+            <a class="text-link" href="about.html">A Little More About Me <span aria-hidden="true">↗</span></a>
+            <div class="studio-stats" aria-label="Studio at a glance">
+              <div><strong>06</strong><span>Concept projects</span></div>
+              <div><strong>06</strong><span>Creative disciplines</span></div>
+              <div><strong>01</strong><span>Independent perspective</span></div>
             </div>
           </div>
         </section>
