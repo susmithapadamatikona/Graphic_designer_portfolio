@@ -1,0 +1,77 @@
+/* Homepage project preparation: aligned cards and a clear next step. */
+.before-begin { padding: 88px 0; }
+.before-begin .added-intro {
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  align-items: end;
+  gap: 48px;
+  margin-bottom: 36px;
+}
+.before-begin .eyebrow { margin-bottom: 20px; }
+.before-begin .added-intro h2 {
+  max-width: 600px;
+  font-size: clamp(34px, 3.5vw, 46px);
+  line-height: 1.16;
+  letter-spacing: -1.8px;
+  text-wrap: balance;
+}
+.before-begin .added-intro > p {
+  justify-self: end;
+  max-width: 300px;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.before-begin .added-items {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 22px;
+}
+.before-begin .added-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 30px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+.before-begin .added-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 26px;
+  background: var(--peach);
+  color: #a62e16;
+  font-size: 11px;
+  font-weight: 700;
+}
+.before-begin .added-item h3 { margin: 0 0 12px; font-size: 22px; line-height: 1.35; }
+.before-begin .added-item p { max-width: none; font-size: 13px; line-height: 1.85; }
+.before-begin .added-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  gap: 28px;
+  margin-top: 30px;
+  margin-left: auto;
+  padding-bottom: 7px;
+}
+@media (max-width: 1000px) {
+  .before-begin .added-intro { gap: 30px; }
+  .before-begin .added-items { gap: 16px; }
+  .before-begin .added-item { padding: 24px; }
+}
+@media (max-width: 700px) {
+  .before-begin { padding: 56px 0; }
+  .before-begin .added-intro { grid-template-columns: 1fr; gap: 16px; margin-bottom: 28px; }
+  .before-begin .eyebrow { margin-bottom: 16px; }
+  .before-begin .added-intro h2 { font-size: clamp(32px, 7vw, 42px); }
+  .before-begin .added-intro > p { justify-self: start; max-width: 460px; }
+  .before-begin .added-items { grid-template-columns: 1fr; gap: 16px; }
+  .before-begin .added-item { padding: 26px; }
+  .before-begin .added-number { margin-bottom: 20px; }
+  .before-begin .added-item h3 { margin: 0 0 10px; }
+  .before-begin .added-link { margin-left: 0; margin-top: 26px; }
+}

@@ -1,0 +1,58 @@
+/* Shared studio photography and readable page introductions. */
+.page-heading.wrap {
+  width: 100%;
+  margin: 0;
+  padding: 80px max(48px, calc((100% - 1200px) / 2));
+  background-image: linear-gradient(90deg, rgba(247,246,242,.97) 0%, rgba(247,246,242,.94) 45%, rgba(247,246,242,.62) 100%), url('../images/studio-workspace.webp');
+  background-size: cover;
+  background-position: center, center 48%;
+  border-bottom: 1px solid var(--line);
+}
+.page-heading h1 {
+  max-width: 850px;
+  font-size: clamp(40px, 4.7vw, 64px);
+  line-height: 1.12;
+  letter-spacing: -2.5px;
+  margin-bottom: 22px;
+  overflow-wrap: break-word;
+}
+.page-heading > p { max-width: 570px; font-size: 14px; line-height: 1.85; color: #50504b; }
+.page-heading .eyebrow { margin-bottom: 22px; }
+
+/* Extend the same background behind the homepage introduction. */
+.hero { position: relative; isolation: isolate; }
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0 calc((100% - 100vw) / 2);
+  z-index: -1;
+  background: linear-gradient(90deg, rgba(247,246,242,.97), rgba(247,246,242,.88)), url('../images/studio-workspace.webp') center / cover;
+  pointer-events: none;
+}
+
+body[data-page="about"] .page-heading { padding-top: 90px; padding-bottom: 90px; }
+body[data-page="about"] .page-heading h1 { max-width: 780px; text-wrap: balance; }
+body[data-page="about"] #main > .split { gap: 64px; padding-top: 72px; padding-bottom: 72px; }
+body[data-page="about"] .about-art { min-height: 0; padding: 0; display: block; background: var(--surface); border: 1px solid var(--line); }
+body[data-page="about"] .about-art img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; transform: none; box-shadow: none; }
+body[data-page="about"] .about-tag { position: static; transform: none; padding: 18px 24px; background: var(--surface); color: var(--muted); font-size: 12px; border-top: 1px solid var(--line); }
+body:is([data-page="login"], [data-page="register"], [data-page="forgot-password"]) #main {
+  display: flow-root;
+  background: linear-gradient(rgba(247,246,242,.88), rgba(247,246,242,.94)), url('../images/studio-workspace.webp') center / cover;
+}
+@media (max-width: 1100px) {
+  .page-heading.wrap { padding-inline: 32px; }
+  body[data-page="about"] #main > .split { gap: 36px; }
+}
+@media (max-width: 800px) {
+  .page-heading.wrap { padding-block: 60px; }
+  body[data-page="about"] .page-heading { padding-block: 64px; }
+  body[data-page="about"] #main > .split { grid-template-columns: 1fr; gap: 32px; padding-block: 56px; }
+}
+@media (max-width: 600px) {
+  .page-heading.wrap { padding: 48px 20px; background-image: linear-gradient(rgba(247,246,242,.91), rgba(247,246,242,.94)), url('../images/studio-workspace.webp'); }
+  .page-heading h1 { font-size: clamp(34px, 9vw, 46px); letter-spacing: -1.5px; margin-bottom: 18px; }
+  .page-heading > p { font-size: 13px; }
+  body[data-page="about"] .page-heading { padding-block: 52px; }
+  body[data-page="about"] #main > .split { padding-block: 48px; }
+}

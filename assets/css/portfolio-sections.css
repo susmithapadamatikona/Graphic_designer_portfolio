@@ -1,0 +1,54 @@
+/* Portfolio supporting content: consistent headings, cards, and next steps. */
+body[data-page="portfolio"] .page-additions { margin-top: 0; }
+body[data-page="portfolio"] .added-section { padding: 80px 0; }
+body[data-page="portfolio"] .added-intro {
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: end; gap: 48px; margin-bottom: 36px;
+}
+body[data-page="portfolio"] .added-intro .eyebrow { margin-bottom: 20px; }
+body[data-page="portfolio"] .added-intro h2 {
+  max-width: 570px; font-size: clamp(32px, 3.5vw, 44px);
+  line-height: 1.18; letter-spacing: -1.6px; text-wrap: balance;
+}
+body[data-page="portfolio"] .added-intro > p {
+  justify-self: end; max-width: 320px; font-size: 14px; line-height: 1.85;
+}
+body[data-page="portfolio"] .added-items {
+  grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; align-items: stretch;
+}
+body[data-page="portfolio"] .added-item {
+  min-width: 0; padding: 30px; border: 1px solid var(--line);
+  background: var(--surface); display: flex; flex-direction: column; align-items: flex-start;
+}
+body[data-page="portfolio"] .added-number {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; margin-bottom: 26px;
+  background: var(--peach); color: #a62e16; font-size: 11px; font-weight: 700;
+}
+body[data-page="portfolio"] .added-item h3 { margin: 0 0 12px; font-size: 22px; line-height: 1.35; }
+body[data-page="portfolio"] .added-item p { max-width: none; font-size: 13px; line-height: 1.85; }
+body[data-page="portfolio"] .added-link {
+  display: flex; align-items: center; justify-content: space-between;
+  width: fit-content; gap: 28px; margin: 30px 0 0 auto; padding-bottom: 7px;
+}
+/* Present the collection note as a quieter, compact information panel. */
+body[data-page="portfolio"] [aria-labelledby="added-heading-3"] .added-items {
+  gap: 0; border: 1px solid var(--line); background: #eeede8;
+}
+body[data-page="portfolio"] [aria-labelledby="added-heading-3"] .added-item { border: 0; background: transparent; }
+body[data-page="portfolio"] [aria-labelledby="added-heading-3"] .added-item + .added-item { border-left: 1px solid var(--line); }
+@media (max-width: 1000px) {
+  body[data-page="portfolio"] .added-intro { gap: 30px; }
+  body[data-page="portfolio"] .added-items { gap: 16px; }
+  body[data-page="portfolio"] .added-item { padding: 24px; }
+}
+@media (max-width: 750px) {
+  body[data-page="portfolio"] .added-section { padding: 56px 0; }
+  body[data-page="portfolio"] .added-intro { grid-template-columns: 1fr; gap: 16px; margin-bottom: 28px; }
+  body[data-page="portfolio"] .added-intro > p { justify-self: start; max-width: 480px; }
+  body[data-page="portfolio"] .added-items { grid-template-columns: 1fr; gap: 16px; }
+  body[data-page="portfolio"] .added-number { margin-bottom: 20px; }
+  body[data-page="portfolio"] .added-link { margin-left: 0; margin-top: 26px; }
+  body[data-page="portfolio"] [aria-labelledby="added-heading-3"] .added-items { gap: 0; }
+  body[data-page="portfolio"] [aria-labelledby="added-heading-3"] .added-item + .added-item { border-left: 0; border-top: 1px solid var(--line); }
+}

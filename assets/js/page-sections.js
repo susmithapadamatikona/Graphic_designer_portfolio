@@ -145,7 +145,7 @@ const sections = {
  ],
  'profile-settings': [
   ['CONTACT DETAILS','Make the next step clear.','The saved profile supplies contact information on the inquiry pages.',[['Email','Replace the sample mailbox with the address you want displayed.'],['Location','Use a city or working region without adding a private address.'],['Availability','Keep the availability indicator aligned with your actual schedule.']]],
-  ['PROFILE BOUNDARIES','Understand what changes here.','These settings affect the local demonstration profile.',[['Browser-local','The values are stored on this device and origin.'],['Contact content','Saved email, location and availability appear on the contact pages.'],['Brand identity','The portfolio’s Studio Pixel visual branding remains part of the site design.']]],
+  ['PROFILE BOUNDARIES','Understand what changes here.','These settings affect the local demonstration profile.',[['Browser-local','The values are stored on this device and origin.'],['Contact content','Saved email, location and availability appear on the contact pages.'],['Brand identity','The portfolio’s Stackly visual branding remains part of the site design.']]],
   ['AFTER UPDATING','Check the contact experience.','A short preview catches incomplete or inconsistent information.',[['Email link','Confirm the displayed address has the intended spelling.'],['Location text','Check that it reads clearly at mobile widths.'],['Availability','Review the status next to the inquiry form.']],'contact.html','Preview contact page']
  ],
  'website-settings': [
@@ -156,6 +156,7 @@ const sections = {
 };
 
 export function addPageSections(page) {
+ if(['contact','login','register'].includes(page)) return;
  const entries=sections[page];
  if(!entries) return;
  const main=document.querySelector('#main');

@@ -1,0 +1,57 @@
+/* Services: consistent supporting sections and readable process cards. */
+body[data-page="services"] .page-additions { margin-top: 0; }
+body[data-page="services"] :is(.added-section, .section:has(.steps)) { padding: 80px 0; }
+body[data-page="services"] :is(.added-intro, .section:has(.steps) .section-heading) {
+  gap: 40px; margin-bottom: 36px; align-items: end;
+}
+body[data-page="services"] .added-intro { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+body[data-page="services"] :is(.added-intro, .section:has(.steps) .section-heading) .eyebrow { margin-bottom: 20px; }
+body[data-page="services"] :is(.added-intro, .section:has(.steps) .section-heading) h2 {
+  max-width: 590px; font-size: clamp(32px, 3.5vw, 44px);
+  line-height: 1.18; letter-spacing: -1.6px; text-wrap: balance;
+}
+body[data-page="services"] .added-intro > p { justify-self: end; max-width: 320px; font-size: 14px; line-height: 1.85; }
+body[data-page="services"] :is(.added-items, .steps) { gap: 22px; align-items: stretch; }
+body[data-page="services"] .steps { margin-top: 0; }
+body[data-page="services"] :is(.added-item, .step) {
+  min-width: 0; padding: 28px; border: 1px solid var(--line); background: var(--surface);
+}
+body[data-page="services"] :is(.added-number, .step > span) {
+  display: inline-flex; align-items: center; justify-content: center; min-width: 42px;
+  height: 40px; padding: 0 8px; margin-bottom: 26px;
+  background: var(--peach); color: #a62e16; font-size: 11px; font-weight: 700;
+}
+body[data-page="services"] :is(.added-item, .step) h3 { margin: 0 0 12px; font-size: 21px; line-height: 1.35; }
+body[data-page="services"] :is(.added-item, .step) p { max-width: none; font-size: 13px; line-height: 1.85; }
+body[data-page="services"] .added-link { display: flex; width: fit-content; align-items: center; gap: 28px; margin: 30px 0 0 auto; padding-bottom: 7px; }
+/* Questions read as full-width answers instead of narrow columns. */
+body[data-page="services"] [aria-labelledby="added-heading-3"] .added-items {
+  grid-template-columns: 1fr; gap: 0; border: 1px solid var(--line); background: var(--surface);
+}
+body[data-page="services"] [aria-labelledby="added-heading-3"] .added-item {
+  display: grid; grid-template-columns: 42px minmax(0, 1fr) minmax(0, 1.25fr);
+  gap: 24px; align-items: start; padding: 28px; border: 0;
+}
+body[data-page="services"] [aria-labelledby="added-heading-3"] .added-item + .added-item { border-top: 1px solid var(--line); }
+body[data-page="services"] [aria-labelledby="added-heading-3"] .added-number { margin: 0; }
+body[data-page="services"] [aria-labelledby="added-heading-3"] h3 { margin: 4px 0 0; font-size: 19px; }
+@media (max-width: 1100px) {
+  body[data-page="services"] .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body[data-page="services"] :is(.added-items, .steps) { gap: 16px; }
+  body[data-page="services"] :is(.added-item, .step) { padding: 24px; }
+  body[data-page="services"] [aria-labelledby="added-heading-3"] .added-items { gap: 0; }
+}
+@media (max-width: 750px) {
+  body[data-page="services"] :is(.added-section, .section:has(.steps)) { padding: 56px 0; }
+  body[data-page="services"] .added-intro { grid-template-columns: 1fr; gap: 16px; margin-bottom: 28px; }
+  body[data-page="services"] .added-intro > p { justify-self: start; max-width: 480px; }
+  body[data-page="services"] .added-items { grid-template-columns: 1fr; }
+  body[data-page="services"] .added-link { margin-left: 0; }
+  body[data-page="services"] [aria-labelledby="added-heading-3"] .added-item { grid-template-columns: 42px minmax(0, 1fr); gap: 12px 18px; padding: 24px; }
+  body[data-page="services"] [aria-labelledby="added-heading-3"] .added-number { grid-column: 1; grid-row: 1 / 3; }
+  body[data-page="services"] [aria-labelledby="added-heading-3"] :is(h3, .added-item p) { grid-column: 2; }
+}
+@media (max-width: 500px) {
+  body[data-page="services"] .steps { grid-template-columns: 1fr; }
+  body[data-page="services"] [aria-labelledby="added-heading-3"] .added-item { padding: 20px; gap: 10px 14px; }
+}

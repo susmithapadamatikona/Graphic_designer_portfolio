@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Studio Pixel — distinctive visual identities, thoughtful packaging and digital experiences."
+      content="Stackly — distinctive visual identities, thoughtful packaging and digital experiences."
     />
-    <title>Login — Studio Pixel</title>
-    <link rel="icon" href="assets/images/favicon.svg" />
+    <title>Login — Stackly</title>
+    <link rel="icon" href="assets/images/stackly-whitish_blue-logo.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
     <link
@@ -18,203 +18,60 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="stylesheet" href="assets/css/page-sections.css" />
+    <link rel="stylesheet" href="assets/css/page-heroes.css" />
+    <link rel="stylesheet" href="assets/css/auth-pages.css" />
+    <link rel="stylesheet" href="assets/css/mobile.css" />
     <script type="module" src="assets/js/main.js"></script>
   </head>
   <body data-page="login">
     <a class="skip" href="#main">Skip to content</a>
     <div id="app" data-static-page="true">
-      <header class="header">
-        <div class="nav wrap">
-          <a class="logo" href="index.html" aria-label="Studio Pixel home"
-            ><b aria-hidden="true">✳</b> STUDIO PIXEL<span class="accent">.</span></a
-          >
-          <nav class="navlinks" id="navigation" aria-label="Main navigation">
-            <a href="index.html">Home</a><a href="about.html">About</a
-            ><a href="portfolio.html">Portfolio</a><a href="services.html">Services</a
-            ><a href="blog.html">Journal</a><a href="contact.html">Contact</a>
-          </nav>
-          <a class="button" href="start-project.html"
-            >Start a Project <span aria-hidden="true">↗</span></a
-          ><button
-            class="menu-toggle"
-            aria-expanded="false"
-            aria-controls="navigation"
-            aria-label="Open navigation"
-          >
-            ☰
-          </button>
-        </div>
-      </header>
-      <main id="main">
+<main id="main">
         <div class="auth-box">
-          <div class="eyebrow">STUDIO PIXEL / DEMO ACCESS</div>
+          <div class="auth-navigation">
+            <a class="logo" href="index.html" aria-label="Stackly home">
+              <img src="assets/images/stackly-whitish_blue-logo.webp" alt="Stackly" width="160" height="61" />
+            </a>
+            <a class="button secondary auth-home" href="index.html"><span aria-hidden="true">&larr;</span> Back to Home</a>
+          </div>
+          <div class="eyebrow">STACKLY / DEMO ACCESS</div>
           <h2>Back to the studio.</h2>
           <p>
             Frontend demo only. This does not provide secure authentication. Do not use a real
             password.
           </p>
           <form id="auth-form">
-            <label class="field">Email<input name="email" type="email" required="" /></label
+            <label class="field">Select Role
+              <select name="role" required>
+                <option value="">Select your role</option>
+                <option value="client">Client</option>
+                <option value="designer">Designer</option>
+                <option value="admin">Admin</option>
+              </select>
+            </label>
+
+            <label class="field">Email<input name="email" type="email" placeholder="you@example.com" autocomplete="email" required="" /></label
             ><label class="field"
               >Demo password<input
                 name="password"
+                placeholder="At least 6 characters"
                 type="password"
                 required=""
                 minlength="6"
                 autocomplete="off" /></label
             ><button class="button">Enter Demo Dashboard ↗</button>
           </form>
-          <p style="margin-top: 20px">
+          <nav class="auth-social" aria-label="Social media"><a href="404.html" aria-label="Instagram (opens in a new tab)" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1"/></svg></a><a href="404.html" aria-label="YouTube (opens in a new tab)" title="YouTube"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" fill="#ff0000"/><path d="M10 9v6l6-3z" fill="#fff"/></svg></a><a href="404.html" aria-label="LinkedIn (opens in a new tab)" title="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7M11 17v-7m0 3c0-4 6-4 6 0v4"/><circle cx="7" cy="7" r="1"/></svg></a></nav>
+          <p class="auth-links">
             <a href="register.html">Create a demo profile</a> ·
-            <a href="forgot-password.html">Reset access</a>
+            <a href="404.html">Forgot Password?</a>
           </p>
-          <p>
+          <p class="auth-note">
             No real credentials are required. The login form opens a local demonstration session.
           </p>
         </div>
-        <div class="page-additions">
-          <section class="added-section" aria-labelledby="added-heading-1">
-            <div class="wrap">
-              <div class="added-intro">
-                <div>
-                  <div class="eyebrow">DEMO ACCESS</div>
-                  <h2 id="added-heading-1">Enter with sample credentials.</h2>
-                </div>
-                <p>The form opens a browser-local workspace demonstration.</p>
-              </div>
-              <div class="added-items">
-                <div class="added-item">
-                  <span class="added-number">01</span>
-                  <h3>Email</h3>
-                  <p>Use a sample email address with a valid email format.</p>
-                </div>
-                <div class="added-item">
-                  <span class="added-number">02</span>
-                  <h3>Password</h3>
-                  <p>Enter a made-up value of at least six characters.</p>
-                </div>
-                <div class="added-item">
-                  <span class="added-number">03</span>
-                  <h3>Session</h3>
-                  <p>The demo session is stored on this browser only.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="added-section" aria-labelledby="added-heading-2">
-            <div class="wrap">
-              <div class="added-intro">
-                <div>
-                  <div class="eyebrow">INSIDE THE WORKSPACE</div>
-                  <h2 id="added-heading-2">Try the content workflows.</h2>
-                </div>
-                <p>The tools demonstrate how an independent portfolio could be managed.</p>
-              </div>
-              <div class="added-items">
-                <div class="added-item">
-                  <span class="added-number">01</span>
-                  <h3>Projects</h3>
-                  <p>Create concepts, edit details and switch publication status.</p>
-                </div>
-                <div class="added-item">
-                  <span class="added-number">02</span>
-                  <h3>Inquiries</h3>
-                  <p>Review locally submitted project messages.</p>
-                </div>
-                <div class="added-item">
-                  <span class="added-number">03</span>
-                  <h3>Content</h3>
-                  <p>Manage categories, testimonials and journal entries.</p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section class="added-section" aria-labelledby="added-heading-3">
-            <div class="wrap">
-              <div class="added-intro">
-                <div>
-                  <div class="eyebrow">ACCESS BOUNDARIES</div>
-                  <h2 id="added-heading-3">This is a demonstration session.</h2>
-                </div>
-                <p>The frontend has no secure account verification or protected server database.</p>
-              </div>
-              <div class="added-items">
-                <div class="added-item">
-                  <span class="added-number">01</span>
-                  <h3>No real passwords</h3>
-                  <p>Do not reuse an existing account password.</p>
-                </div>
-                <div class="added-item">
-                  <span class="added-number">02</span>
-                  <h3>No shared accounts</h3>
-                  <p>Changes do not sync between devices or browsers.</p>
-                </div>
-                <div class="added-item">
-                  <span class="added-number">03</span>
-                  <h3>Local reset</h3>
-                  <p>Use Reset Access to clear the current demo session.</p>
-                </div>
-              </div>
-              <a class="text-link added-link" href="forgot-password.html"
-                >Reset demo access <span aria-hidden="true">↗</span></a
-              >
-            </div>
-          </section>
-        </div>
       </main>
-      <footer class="footer">
-        <div class="wrap">
-          <div class="footer-grid">
-            <div>
-              <a class="logo" href="index.html"><b>✳</b> STUDIO PIXEL.</a>
-              <p>Independent thinking.<br />Distinctive design. Lasting impressions.</p>
-              <span class="badge">Illustrative portfolio / demo content</span>
-            </div>
-            <div>
-              <h4>Explore</h4>
-              <a href="about.html">About</a><a href="portfolio.html">Portfolio</a
-              ><a href="services.html">Services</a><a href="blog.html">Journal</a
-              ><a href="contact.html">Contact</a><a href="process.html">The Process</a
-              ><a href="case-studies.html">Case Studies</a
-              ><a href="testimonials.html">Kind Words</a>
-            </div>
-            <div>
-              <h4>What I Do</h4>
-              <a href="service-details.html?id=0">Brand Identity Design</a
-              ><a href="service-details.html?id=1">Logo Design</a
-              ><a href="service-details.html?id=2">Packaging Design</a
-              ><a href="service-details.html?id=3">Print &amp; Editorial Design</a
-              ><a href="service-details.html?id=4">Social Media Creatives</a
-              ><a href="service-details.html?id=5">UI/UX &amp; Digital Design</a
-              ><a href="portfolio.html">Portfolio Categories</a>
-            </div>
-            <div>
-              <h4>A little creative inspiration.</h4>
-              <p>Occasional notes on design, process and things worth sharing.</p>
-              <form class="newsletter">
-                <label class="screen-reader" for="newsletter-email">Email address</label
-                ><input
-                  id="newsletter-email"
-                  type="email"
-                  name="email"
-                  placeholder="Your email address"
-                  required=""
-                /><button aria-label="Subscribe">↗</button>
-              </form>
-              <p>Demo subscription saved in this browser.</p>
-              <a href="contact.html#social">Social &amp; contact details ↗</a>
-            </div>
-          </div>
-          <div class="footer-bottom">
-            <span>© 2026 Studio Pixel. Made with purpose.</span>
-            <div>
-              <a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a
-              ><a href="login.html">Demo Admin ↗</a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
+</div>
     <div id="toast" role="status" aria-live="polite"></div>
     <dialog id="modal"></dialog>
     <button class="back-top" aria-label="Back to top">↑</button>
